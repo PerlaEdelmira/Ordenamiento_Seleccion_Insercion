@@ -27,6 +27,19 @@ class MetodosDeOrdenamiento{
 		System.out.println("-------> Intercambios: " + intercambios);
 		System.out.println("-------> Comparaciones: " + comparaciones);
 	}
+	public void ordenamientoPorInsercionDirecta(int[]numeros) {
+		int aux, j;
+		for(int i = 1;i<numeros.length; i++) { //desde el segundo elemento hasta
+			aux =numeros[i];					// el final, gusrdamos el elemento y
+			j = i-1;							//empezamos a comprobar con el aterior
+			while((j>=0) && (aux < numeros[j])) {	//mientras queden posiciones y el
+				numeros[j+1] = numeros[j];			//valor de aux sea menor que los
+				j--;							
+			}
+			numeros[j+1] = aux;
+		}
+	}
+	
 }
 public class Seleccion_Insercion {
 	public static void main(String[]args){
