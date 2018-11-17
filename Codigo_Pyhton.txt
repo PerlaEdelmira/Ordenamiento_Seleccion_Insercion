@@ -9,3 +9,16 @@ def ordenamientoPorSeleccion(numeros):
         numeros [recorrido] = numeros[posicionDelMayor]
         numeros[posicionDelMayor] = aux
   
+def ordenamientoPorInsercion(numeros):
+    for indice in range(1, len(numeros)):
+        valor = numeros[indice]
+        i = numeros-1
+        while i >= 0:
+            if valor < numeros[i]:
+                numeros[i+1] = numeros[i]
+                
+                numeros[i] = valor
+                i = i-1
+            else:
+                break
+            
