@@ -39,6 +39,9 @@ class MetodosDeOrdenamiento{
 			numeros[j+1] = aux;
 		}
 	}
+	public void mostrarVector(int numeros[]) {
+		System.out.println(Arrays.toString(numeros));
+	}
 	
 }
 public class Seleccion_Insercion {
