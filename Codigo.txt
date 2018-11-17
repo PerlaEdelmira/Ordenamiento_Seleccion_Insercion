@@ -1,0 +1,35 @@
+import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
+class MetodosDeOrdenamiento{
+	
+	public void ordenamientoPorSeleccion(int[] numeros) {
+		int recorridos=0, intercambios=0, comparaciones=0;
+		long tInicio, tFin;
+		tInicio = System.nanoTime();
+		for(int i=0;i<numeros.length;i++) {
+			int minimo=i;
+			for(int j=i+1;j<numeros.length;j++) {
+				if(numeros[j]<numeros[minimo]) {
+					minimo = j;
+					intercambios++;
+				}
+				int aux = numeros[i];
+				numeros[i]= numeros[minimo];
+				numeros[minimo]=aux;
+				comparaciones++;
+			}
+			recorridos++;
+		}
+		tFin = System.nanoTime();
+		System.out.println("-------> Tiempo de Procesamiento: " + (tFin - tInicio));
+		System.out.println("-------> Recorridos: " + recorridos);
+		System.out.println("-------> Intercambios: " + intercambios);
+		System.out.println("-------> Comparaciones: " + comparaciones);
+	}
+}
+public class Seleccion_Insercion {
+	public static void main(String[]args){
+
+	}
+}
