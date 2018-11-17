@@ -1,0 +1,11 @@
+def ordenamientoPorSeleccion(numeros):
+    for recorrido in range(len(numeros)-1, 0, -1):
+        posicionDelMayor = 0
+        for recorrido2 in range (1, recorrido+1):
+            if numeros[recorrido2]> numeros[posicionDelMayor]:
+                posicionDelMayor = recorrido2
+                
+        aux = numeros[recorrido]
+        numeros [recorrido] = numeros[posicionDelMayor]
+        numeros[posicionDelMayor] = aux
+  
